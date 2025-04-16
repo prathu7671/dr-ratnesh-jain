@@ -2,7 +2,7 @@
 import Navigation from "@/components/Navigation";
 import ImpactCounter from "@/components/ImpactCounter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Flask, Briefcase } from "lucide-react";
+import { ArrowRight, BookOpen, Beaker, Briefcase } from "lucide-react";
 
 const Index = () => {
   return (
@@ -42,7 +42,7 @@ const Index = () => {
           <h2 className="section-title text-center">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <Flask className="w-12 h-12 text-accent mb-4" />
+              <Beaker className="w-12 h-12 text-accent mb-4" />
               <h3 className="text-xl font-bold mb-3">Biopharma Research</h3>
               <p className="text-gray-600">
                 Leading innovative research in biopharmaceuticals, nanomedicine, and drug delivery systems.
