@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import ImpactCounter from "@/components/ImpactCounter";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-to-br from-white via-purple-50 to-blue-50">
+      <section className="pt-24 pb-16 px-4 bg-gradient-to-br from-white via-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="hero-title mb-6">
@@ -37,7 +36,7 @@ const Index = () => {
       </section>
 
       {/* Areas of Expertise */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -67,7 +66,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-gray-50">
+      <section id="contact" className="py-16 px-4 bg-gradient-to-bl from-white via-blue-50 to-purple-50">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="section-title">Get in Touch</h2>
           <p className="text-gray-600 mb-8">
