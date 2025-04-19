@@ -58,4 +58,32 @@
   .counter-label {
     @apply text-gray-600 font-medium;
   }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .gradient-bg-light {
+    @apply bg-gradient-to-br from-white via-blue-50 to-purple-50;
+  }
+
+  .gradient-bg-alt {
+    @apply bg-gradient-to-r from-gray-50 to-white;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-6 rounded-xl shadow-lg;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 text-accent mb-4;
+  }
+
+  .feature-title {
+    @apply text-xl font-bold mb-3;
+  }
+
+  .feature-description {
+    @apply text-gray-600;
+  }
 }
