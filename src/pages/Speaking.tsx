@@ -1,5 +1,5 @@
 
-import { Presentation, Microphone, Users } from "lucide-react";
+import { Presentation, Mic, Users } from "lucide-react";
 
 const speakingData = [
   {
@@ -158,7 +158,7 @@ const speakingData = [
         location: "",
       },
     ],
-    icon: Microphone,
+    icon: Mic,
   },
   {
     role: "Moderator",
@@ -228,3 +228,4 @@ const Speaking = () => (
 );
 
 export default Speaking;
+

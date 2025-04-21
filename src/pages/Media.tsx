@@ -1,8 +1,7 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Newspaper, Video, Camera, ArrowRight } from "lucide-react";
+import { Calendar, Newspaper, Video, Camera, ArrowRight, Award, Book, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
