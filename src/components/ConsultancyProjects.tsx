@@ -19,15 +19,23 @@ const projects = [
     agency: "Oncosimis Biotech Pvt Ltd"
   },
   {
-    title: "Process Development, Scale-Up, and Production",
+    title: "Process development, scale up and production, formulation development and characterization of XXXX",
     agency: "Mynvax Pvt. Ltd."
   },
   {
-    title: "mRNA Process Development",
+    title: "mRNA process development",
     agency: "Serum Institute of India"
   },
   {
-    title: "Due Diligence on Technologies",
+    title: "Process development, scale up and production, formulation development and characterization of XXXX",
+    agency: "Mynvax Pvt. Ltd."
+  },
+  {
+    title: "Process development, scale up and production, formulation development and characterization of XXXX",
+    agency: "Mynvax Pvt. Ltd."
+  },
+  {
+    title: "Due diligence on two technologies: Tigen and Kure.ai",
     agency: "BDR Pharmaceuticals"
   }
 ];
