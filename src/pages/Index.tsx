@@ -1,7 +1,8 @@
+
 import Navigation from "@/components/Navigation";
 import ImpactCounter from "@/components/ImpactCounter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Beaker, Briefcase, Building, Award, Users, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ValueProp from "@/components/ValueProp";
 import FeaturedCollaborations from "@/components/FeaturedCollaborations";
@@ -11,14 +12,14 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section with Photo and Profile */}
-      <section className="pt-24 pb-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 order-2 md:order-1">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
               <h1 className="text-4xl font-bold text-gray-900">
                 Dr. Ratnesh Jain
               </h1>
@@ -27,99 +28,87 @@ const Index = () => {
               </p>
               <p className="text-gray-600">
                 A distinguished expert in biopharmaceutical product development with over 15 years of experience.
-                Specializing in nanomedicine, 3D bioprinting, and innovative drug delivery systems. Leading
-                breakthrough research while mentoring the next generation of scientists.
+                Specializing in nanomedicine, 3D bioprinting, and innovative drug delivery systems.
               </p>
               <div className="flex gap-4">
                 <Button size="lg" asChild>
                   <Link to="/about">Learn More</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact">Connect</Link>
-                </Button>
               </div>
             </div>
-            <div className="order-1 md:order-2">
+            <div>
               <img
                 src="/ratnesh-jain.jpg"
                 alt="Dr. Ratnesh Jain"
-                className="rounded-lg shadow-lg w-full max-w-md mx-auto"
+                className="rounded-lg shadow-sm w-full max-w-md mx-auto"
               />
             </div>
           </div>
         </div>
       </section>
       
-      {/* Impact Counter Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Impact at a Glance</h2>
+      {/* Impact Counter */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Impact at a Glance</h2>
           <ImpactCounter />
         </div>
       </section>
       
-      {/* Value Proposition Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+      {/* Value Proposition */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
           <ValueProp />
         </div>
       </section>
       
-      {/* Other sections with minimal styling */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Key Areas of Expertise</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg">
-              <Award className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Awards and Fellowships</h3>
-              <p className="text-gray-600">Recognition for excellence in biopharmaceutical research.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg">
-              <Beaker className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Research & Innovations</h3>
-              <p className="text-gray-600">Pioneering work in nanomedicine and bioprinting.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg">
-              <Briefcase className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Consultancy</h3>
-              <p className="text-gray-600">Strategic advising for biopharma industry.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg">
-              <GraduationCap className="w-12 h-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Education</h3>
-              <p className="text-gray-600">Training and mentoring future scientists.</p>
-            </div>
+      {/* Expertise */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Key Areas of Expertise</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "Research & Innovations", desc: "Pioneering work in nanomedicine and bioprinting" },
+              { title: "Consultancy", desc: "Strategic advising for biopharma industry" },
+              { title: "Education", desc: "Training and mentoring future scientists" }
+            ].map((item, index) => (
+              <div key={index} className="p-6 bg-white rounded-lg border border-gray-100 hover:border-gray-200 transition-colors">
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Simplified Remaining Sections */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Industry Collaborations</h2>
+      {/* Collaborations */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Industry Collaborations</h2>
           <FeaturedCollaborations />
         </div>
       </section>
       
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Recent Consultancy Projects</h2>
+      {/* Consultancy Projects */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Recent Consultancy Projects</h2>
           <ConsultancyProjects />
         </div>
       </section>
       
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Startup Initiatives</h2>
+      {/* Startups */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Startup Initiatives</h2>
           <StartupGrid />
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Ready to Collaborate?</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900">Ready to Collaborate?</h2>
           <p className="text-gray-600 mb-8">
             Connect with Dr. Ratnesh Jain to explore collaboration opportunities.
           </p>
