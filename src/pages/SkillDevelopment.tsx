@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,22 +8,16 @@ import { Link } from "react-router-dom";
 const SkillDevelopment = () => {
   const upcomingWorkshops = [
     {
-      title: "Advanced Bioprocessing Workshop",
-      date: "June 15-17, 2025",
-      location: "ICT Mumbai",
-      description: "Hands-on training on upstream and downstream bioprocessing techniques."
+      title: "3DCC Workshop",
+      date: "June 2-6, 2025",
+      location: "INSTITUTE OF CHEMICAL TECHNOLOGY, MUMBAI",
+      description: "Comprehensive training on 3D cell culture technologies and applications."
     },
     {
-      title: "3D Bioprinting Masterclass",
-      date: "August 10-12, 2025",
-      location: "Mumbai Biocluster",
-      description: "Comprehensive training on 3D bioprinting technologies and applications."
-    },
-    {
-      title: "Biopharma Regulatory Compliance",
+      title: "Peptides and Complex Generics Symposium",
       date: "September 25-26, 2025",
-      location: "Virtual",
-      description: "Strategic approaches to navigating regulatory challenges in biopharmaceuticals."
+      location: "The LaLiT, Mumbai",
+      description: "Strategic approaches to navigating challenges in peptides and complex generics development."
     }
   ];
 
@@ -189,7 +182,7 @@ const SkillDevelopment = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center mb-12">Upcoming Workshops & Events</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {upcomingWorkshops.map((workshop, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">

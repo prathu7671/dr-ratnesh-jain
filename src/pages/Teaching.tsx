@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -165,55 +164,6 @@ const Teaching = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Teaching Resources */}
-      <section className="py-16 px-4 bg-gradient-to-r from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="section-title text-center mb-12">Teaching Resources</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Award className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Course Materials</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Access lecture notes, presentations, and supplementary materials for current courses.
-                </p>
-                <Button variant="outline" className="w-full">Access Materials</Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Users className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Workshop Registration</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Register for upcoming workshops and hands-on training sessions in biopharma technologies.
-                </p>
-                <Link to="/skill-development">
-                  <Button variant="outline" className="w-full">Register Now</Button>
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <GraduationCap className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Research Opportunities</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Explore opportunities for research projects, internships, and Ph.D. positions.
-                </p>
-                <Button variant="outline" className="w-full">View Opportunities</Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

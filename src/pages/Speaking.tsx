@@ -1,4 +1,3 @@
-
 import { Presentation, Mic, Users } from "lucide-react";
 
 const speakingData = [
@@ -228,4 +227,3 @@ const Speaking = () => (
 );
 
 export default Speaking;
-
