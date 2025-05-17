@@ -24,10 +24,11 @@ const Index = () => {
                 Dr. Ratnesh Jain
               </h1>
               <p className="text-lg text-gray-600">
-                Director Mumbai Biocluster
+                Associate Professor at ICT Mumbai
               </p>
               <p className="text-gray-600">
-                Dr. Ratnesh Jain, Associate Professor at ICT Mumbai, is a visionary in biopharmaceutical product development, a co-founder of innovative startups, and a consultant empowering industries through strategic solutions and knowledge sharing platforms.
+                A distinguished expert in biopharmaceutical product development with over 15 years of experience.
+                Specializing in nanomedicine, 3D bioprinting, and innovative drug delivery systems.
               </p>
               <div className="flex gap-4">
                 <Button size="lg" asChild>
@@ -37,7 +38,7 @@ const Index = () => {
             </div>
             <div>
               <img
-                src="https://static.wixstatic.com/media/a3bbe4_6057860a5f334db18cdcae340cddb952~mv2.png"
+                src="/ratnesh-jain.jpg"
                 alt="Dr. Ratnesh Jain"
                 className="rounded-lg shadow-sm w-full max-w-md mx-auto"
               />
