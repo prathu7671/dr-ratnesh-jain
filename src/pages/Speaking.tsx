@@ -1,4 +1,8 @@
+
 import { Presentation, Mic, Users } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const speakingData = [
   {
@@ -174,56 +178,76 @@ const speakingData = [
   },
 ];
 
-const Speaking = () => (
-  <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 py-16 px-4">
-    <div className="max-w-5xl mx-auto">
-      <h1 className="section-title text-center mb-10">Speaking Engagements</h1>
-      <p className="text-lg text-center text-gray-700 mb-12">
-        Dr. Ratnesh Jain is frequently invited as a <span className="font-medium text-primary">Speaker</span>, <span className="font-medium text-primary">Panelist</span>, and <span className="font-medium text-primary">Moderator</span> at premier national and international forums in biopharma, diagnostics, biosimilars, nanomedicine, innovation, and research. Below are highlights of his engagements and topics delivered.
-      </p>
-      <div className="space-y-12">
-        {speakingData.map(({ role, items, icon: Icon }, idx) => (
-          <div key={role}>
-            <div className="flex items-center mb-6">
-              <Icon className="w-8 h-8 text-accent mr-3" />
-              <h2 className="text-2xl font-semibold">{role} Roles</h2>
-            </div>
-            <ul className="pl-2 border-l-4 border-accent/50 space-y-6">
-              {items.map((item, i) => (
-                <li key={i} className="bg-white rounded-lg shadow-md p-5 card-hover">
-                  <p className="font-semibold mb-1 text-primary">{item.title}</p>
-                  {item.event && (
-                    <p className="text-gray-700">
-                      <span className="font-medium">Event: </span>
-                      {item.event}
-                    </p>
-                  )}
-                  {item.organizers && (
-                    <p className="text-gray-600">
-                      <span className="font-medium">Organizers: </span>
-                      {item.organizers}
-                    </p>
-                  )}
-                  <div className="flex flex-wrap gap-6 mt-1">
-                    {item.date && (
-                      <span className="inline-block text-sm px-2 py-1 bg-accent/10 text-accent rounded mr-2">
-                        {item.date}
-                      </span>
-                    )}
-                    {item.location && (
-                      <span className="inline-block text-sm px-2 py-1 bg-secondary/20 text-secondary rounded">
-                        {item.location}
-                      </span>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
+const Speaking = () => {
+  useEffect(() => {
+    // Add animation to elements when page loads
+    const animateItems = () => {
+      const items = document.querySelectorAll(".animate-item");
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("fade-in");
+        }, 100 * index);
+      });
+    };
+    
+    animateItems();
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <div className="flex-grow bg-gradient-to-br from-white via-blue-50 to-purple-50 py-16 px-4">
+        <div className="max-w-5xl mx-auto animate-item">
+          <h1 className="section-title text-center mb-10 fade-in">Speaking Engagements</h1>
+          <p className="text-lg text-center text-gray-700 mb-12 animate-item">
+            Dr. Ratnesh Jain is frequently invited as a <span className="font-medium text-primary">Speaker</span>, <span className="font-medium text-primary">Panelist</span>, and <span className="font-medium text-primary">Moderator</span> at premier national and international forums in biopharma, diagnostics, biosimilars, nanomedicine, innovation, and research. Below are highlights of his engagements and topics delivered.
+          </p>
+          <div className="space-y-12">
+            {speakingData.map(({ role, items, icon: Icon }, idx) => (
+              <div key={role} className="animate-item">
+                <div className="flex items-center mb-6">
+                  <Icon className="w-8 h-8 text-accent mr-3" />
+                  <h2 className="text-2xl font-semibold">{role} Roles</h2>
+                </div>
+                <ul className="pl-2 border-l-4 border-accent/50 space-y-6">
+                  {items.map((item, i) => (
+                    <li key={i} className="bg-white rounded-lg shadow-md p-5 card-hover transition-all animate-item">
+                      <p className="font-semibold mb-1 text-primary">{item.title}</p>
+                      {item.event && (
+                        <p className="text-gray-700">
+                          <span className="font-medium">Event: </span>
+                          {item.event}
+                        </p>
+                      )}
+                      {item.organizers && (
+                        <p className="text-gray-600">
+                          <span className="font-medium">Organizers: </span>
+                          {item.organizers}
+                        </p>
+                      )}
+                      <div className="flex flex-wrap gap-6 mt-1">
+                        {item.date && (
+                          <span className="inline-block text-sm px-2 py-1 bg-accent/10 text-accent rounded mr-2">
+                            {item.date}
+                          </span>
+                        )}
+                        {item.location && (
+                          <span className="inline-block text-sm px-2 py-1 bg-secondary/20 text-secondary rounded">
+                            {item.location}
+                          </span>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
+      <Footer />
     </div>
-  </div>
-);
+  );
+};
 
 export default Speaking;

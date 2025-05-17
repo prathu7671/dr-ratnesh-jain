@@ -13,19 +13,19 @@
     --card-foreground: 230 40% 30%;
     --popover: 0 0% 100%;
     --popover-foreground: 230 40% 30%;
-    --primary: 235 60% 45%;
+    --primary: 220 75% 40%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 270 70% 70%;
+    --secondary: 260 60% 60%;
     --secondary-foreground: 230 40% 30%;
     --muted: 230 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 280 75% 60%;
+    --accent: 270 65% 55%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 280 75% 60%;
+    --ring: 270 65% 55%;
     --radius: 0.5rem;
   }
 
@@ -85,5 +85,89 @@
 
   .feature-description {
     @apply text-gray-600;
+  }
+
+  /* Animation classes */
+  .fade-in {
+    opacity: 1;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+
+  .scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

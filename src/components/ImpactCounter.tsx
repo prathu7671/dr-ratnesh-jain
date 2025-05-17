@@ -1,13 +1,13 @@
+
 import { useEffect, useState, useRef } from 'react';
 
 interface CounterProps {
   end: number;
   label: string;
-  prefix?: string;
   duration?: number;
 }
 
-const Counter = ({ end, label, prefix = "", duration = 2000 }: CounterProps) => {
+const Counter = ({ end, label, duration = 2000 }: CounterProps) => {
   const [count, setCount] = useState(0);
   const countRef = useRef<number>(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -54,8 +54,8 @@ const Counter = ({ end, label, prefix = "", duration = 2000 }: CounterProps) => 
   }, [end, duration, isVisible]);
 
   return (
-    <div ref={componentRef} className="count-card">
-      <div className="counter-number">{prefix}{count}+</div>
+    <div ref={componentRef} className="count-card animate-item">
+      <div className="counter-number">{count}+</div>
       <div className="counter-label">{label}</div>
     </div>
   );
@@ -77,7 +77,6 @@ const ImpactCounter = () => {
           key={impact.label}
           end={impact.number}
           label={impact.label}
-          prefix={impact.prefix}
           duration={2000 + index * 200}
         />
       ))}
