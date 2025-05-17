@@ -24,7 +24,7 @@ const Index = () => {
                 Dr. Ratnesh Jain
               </h1>
               <p className="text-lg text-gray-600">
-                Associate Professor at ICT Mumbai
+                Director Mumbai Biocluster
               </p>
               <p className="text-gray-600">
                 Dr. Ratnesh Jain, Associate Professor at ICT Mumbai, is a visionary in biopharmaceutical product development, a co-founder of innovative startups, and a consultant empowering industries through strategic solutions and knowledge sharing platforms.
