@@ -38,7 +38,7 @@ const Index = () => {
             </div>
             <div>
               <img
-                src="/ratnesh-jain.jpg"
+                src="https://static.wixstatic.com/media/a3bbe4_6057860a5f334db18cdcae340cddb952~mv2.png"
                 alt="Dr. Ratnesh Jain"
                 className="rounded-lg shadow-sm w-full max-w-md mx-auto"
               />
