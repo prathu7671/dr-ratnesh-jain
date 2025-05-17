@@ -16,7 +16,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
@@ -56,7 +56,7 @@ const Index = () => {
       </section>
       
       {/* Value Proposition */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-green-50">
         <div className="max-w-5xl mx-auto">
           <ValueProp />
         </div>
@@ -68,11 +68,11 @@ const Index = () => {
           <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Key Areas of Expertise</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Research & Innovations", desc: "Pioneering work in nanomedicine and bioprinting" },
-              { title: "Consultancy", desc: "Strategic advising for biopharma industry" },
-              { title: "Education", desc: "Training and mentoring future scientists" }
+              { title: "Research & Innovations", desc: "Pioneering work in nanomedicine and bioprinting", bg: "bg-purple-50" },
+              { title: "Consultancy", desc: "Strategic advising for biopharma industry", bg: "bg-blue-50" },
+              { title: "Education", desc: "Training and mentoring future scientists", bg: "bg-yellow-50" }
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg border border-gray-100 hover:border-gray-200 transition-colors">
+              <div key={index} className={`p-6 ${item.bg} rounded-lg border border-gray-100 hover:border-gray-200 transition-colors shadow-sm`}>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
@@ -82,7 +82,7 @@ const Index = () => {
       </section>
 
       {/* Collaborations */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-pink-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Industry Collaborations</h2>
           <FeaturedCollaborations />
@@ -90,7 +90,7 @@ const Index = () => {
       </section>
       
       {/* Consultancy Projects */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Recent Consultancy Projects</h2>
           <ConsultancyProjects />
@@ -98,7 +98,7 @@ const Index = () => {
       </section>
       
       {/* Startups */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-indigo-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">Startup Initiatives</h2>
           <StartupGrid />
@@ -106,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-orange-50 to-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-6 text-gray-900">Ready to Collaborate?</h2>
           <p className="text-gray-600 mb-8">
