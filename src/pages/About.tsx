@@ -44,7 +44,11 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden bg-gray-300 mb-6">
-                {/* Placeholder for photo - replace with actual image */}
+                <img
+            src="https://static.wixstatic.com/media/a3bbe4_7b5784739749477886327d42af9750bf~mv2.jpg"
+            alt="Dr. Ratnesh Jain"
+            className="object-cover w-full h-full"
+          />
                 <div className="flex items-center justify-center h-full text-gray-500">
                   Dr. Jain's Photo
                 </div>
