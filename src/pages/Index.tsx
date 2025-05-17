@@ -27,8 +27,7 @@ const Index = () => {
                 Associate Professor at ICT Mumbai
               </p>
               <p className="text-gray-600">
-                A distinguished expert in biopharmaceutical product development with over 15 years of experience.
-                Specializing in nanomedicine, 3D bioprinting, and innovative drug delivery systems.
+                Dr. Ratnesh Jain, Associate Professor at ICT Mumbai, is a visionary in biopharmaceutical product development, a co-founder of innovative startups, and a consultant empowering industries through strategic solutions and knowledge sharing platforms.
               </p>
               <div className="flex gap-4">
                 <Button size="lg" asChild>
